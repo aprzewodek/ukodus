@@ -1,0 +1,100 @@
+{
+    "levels": [
+        {
+            "name": "01",
+            "imageName": "c01",
+            "type": "classic",
+            "difficulty": "easy"
+        },
+        {
+            "name": "02",
+            "imageName": "c02",
+            "type": "classic",
+            "difficulty": "easy"
+        },
+        {
+            "name": "03",
+            "imageName": "c03",
+            "type": "classic",
+            "difficulty": "normal"
+        },
+        {
+            "name": "04",
+            "imageName": "c04",
+            "type": "classic",
+            "difficulty": "hard"
+        },
+        {
+            "name": "01",
+            "imageName": "d01",
+            "type": "diagonal",
+            "difficulty": "easy"
+        },
+        {
+            "name": "02",
+            "imageName": "d02",
+            "type": "diagonal",
+            "difficulty": "easy"
+        },
+        {
+            "name": "03",
+            "imageName": "d03",
+            "type": "diagonal",
+            "difficulty": "normal"
+        },
+        {
+            "name": "04",
+            "imageName": "d04",
+            "type": "diagonal",
+            "difficulty": "hard"
+        },
+        {
+            "name": "01",
+            "imageName": "x01",
+            "type": "x",
+            "difficulty": "easy"
+        },
+        {
+            "name": "02",
+            "imageName": "x02",
+            "type": "x",
+            "difficulty": "easy"
+        },
+        {
+            "name": "03",
+            "imageName": "x03",
+            "type": "x",
+            "difficulty": "normal"
+        },
+        {
+            "name": "04",
+            "imageName": "x04",
+            "type": "x",
+            "difficulty": "hard"
+        },
+        {
+            "name": "01",
+            "imageName": "h01",
+            "type": "hyper",
+            "difficulty": "easy"
+        },
+        {
+            "name": "02",
+            "imageName": "h02",
+            "type": "hyper",
+            "difficulty": "easy"
+        },
+        {
+            "name": "03",
+            "imageName": "h03",
+            "type": "hyper",
+            "difficulty": "normal"
+        },
+        {
+            "name": "04",
+            "imageName": "h04",
+            "type": "hyper",
+            "difficulty": "hard"
+        }
+    ]
+}
