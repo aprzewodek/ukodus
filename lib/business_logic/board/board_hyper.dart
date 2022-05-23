@@ -65,22 +65,18 @@ class BoardHyper extends Board {
 
   /// This method checks if specified 3x3 square has correct numbers.
   bool _checkBox(int iStart, int iStop, int jStart, jStop) {
+    // We count how many times each number (from 1 to [_maxNumber])
+    // appear in a 3x3 square:
+    final counts = List<int>.generate(maxNumberOnBoard, (index) => 0);
+
     for (var i = iStart; i < iStop; i++) {
       for (var j = jStart; j < jStop; j++) {
-        // We count how many times each number (from 1 to [_maxNumber])
-        // appear in a 3x3 square:
-        final counts = List<int>.generate(maxNumberOnBoard, (index) => 0);
-
-        for (var m = 0; m < 3; m++) {
-          for (var n = 0; n < 3; n++) {
-            checkOneTile(counts, i, j);
-          }
-        }
-
-        if (!checkOneRule(counts)) {
-          return false;
-        }
+        checkOneTile(counts, i, j);
       }
+    }
+
+    if (!checkOneRule(counts)) {
+      return false;
     }
 
     return true;

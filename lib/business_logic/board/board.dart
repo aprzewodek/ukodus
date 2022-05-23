@@ -43,8 +43,6 @@ abstract class Board {
 
     for (var i = 0; i < size; i++) {
       for (var j = 0; j < size; j++) {
-        board[i][j].verticalPosition = i;
-        board[i][j].horizontalPosition = j;
         board[i][j].number = int.parse(gameModel.numbers[counter]);
 
         if (board[i][j].number > maxNumberOnBoard) {
@@ -129,8 +127,7 @@ abstract class Board {
   }
 
   void checkOneTile(List<int> counts, int i, int j) {
-    if (board[i][j].state == TileState.isOk ||
-        board[i][j].state == TileState.none) {
+    if (board[i][j].state == TileState.isOk) {
       // -1 because index start from 0:
       final number = board[i][j].number - 1;
       counts[number]++;

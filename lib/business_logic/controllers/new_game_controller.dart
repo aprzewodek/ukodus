@@ -27,15 +27,6 @@ class NewGameController {
     }
   }
 
-  Future<void> _loadBestScores(List<LevelModel> levels) async {
-    for (var level in levels) {
-      final bestScore = await IoC().sharedPreferences.getInt(level.fullName);
-      if (bestScore != null) {
-        level.bestScore = bestScore;
-      }
-    }
-  }
-
   Future<String?> loadGame(UkodusType type, String name) async {
     try {
       final path = 'json/${type.name.substring(0, 1)}$name.json';
@@ -46,6 +37,15 @@ class NewGameController {
     } catch (ex, stackTrace) {
       Logger().log(exception: ex, stackTrace: stackTrace);
       return null;
+    }
+  }
+
+  Future<void> _loadBestScores(List<LevelModel> levels) async {
+    for (var level in levels) {
+      final bestScore = await IoC().sharedPreferences.getInt(level.fullName);
+      if (bestScore != null) {
+        level.bestScore = bestScore;
+      }
     }
   }
 }

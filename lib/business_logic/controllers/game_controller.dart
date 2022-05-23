@@ -58,13 +58,13 @@ class GameController extends ChangeNotifier {
   }
 
   bool hasGameEnded() {
-    final result = _board.check();
+    final isGameEnded = points > 0 ? _board.check() : true;
 
-    if (result) {
+    if (isGameEnded) {
       _setGameResult();
     }
 
-    return result;
+    return isGameEnded;
   }
 
   void reset() {
@@ -81,8 +81,7 @@ class GameController extends ChangeNotifier {
   void _setGameResult() {
     if (points < 1) {
       gameResult = GameEndResult.lost;
-    } else if (points < _gameModel.bestPoints) {
-      // Best points represents fewer moves - the lower, the better.
+    } else if (points > _gameModel.bestPoints) {
       gameResult = GameEndResult.bestScore;
       _saveBestScore();
     } else {
