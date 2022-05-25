@@ -3,7 +3,7 @@ import 'package:ukodus/data/enums/ukodus_type.dart';
 import 'package:ukodus/helpers/string_helper.dart';
 
 class LevelModel {
-  static const defaultBestScore = 1000;
+  static const defaultBestScore = 0;
 
   late String name;
   late String imageName;
@@ -28,7 +28,7 @@ class LevelModel {
   }
 
   String get image {
-    return 'images/levels/$imageName.png';
+    return 'assets/images/levels/$imageName.png';
   }
 
   String get fullName {

@@ -19,7 +19,7 @@ class HomeLandscape extends HomeBase {
             getLogo(context),
             const SizedBox(width: UkodusDimentions.paddingBig),
             SizedBox(
-              width: UkodusDimentions.getWidth(context) / 3,
+              width: UkodusDimentions.getWidth(context) / 2,
               child: getTitlePanel(context),
             ),
             const Spacer(),

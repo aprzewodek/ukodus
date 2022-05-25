@@ -3,6 +3,7 @@ import 'package:ukodus/business_logic/board/board.dart';
 import 'package:ukodus/data/enums/game_end_result.dart';
 import 'package:ukodus/data/enums/tile_state.dart';
 import 'package:ukodus/data/models/game_model.dart';
+import 'package:ukodus/data/models/level_model.dart';
 import 'package:ukodus/helpers/ioc.dart';
 import 'package:ukodus/helpers/number_formatter.dart';
 

@@ -7,8 +7,8 @@ class InfoLandscape extends InfoBase {
 
   @override
   Widget build(BuildContext context) {
-    final width = UkodusDimentions.getWidth(context) / 3;
-    final marginWidth = width / 3;
+    final width = UkodusDimentions.getWidth(context) / 2.5;
+    final marginWidth = width / 6;
 
     return Center(
       child: Table(
@@ -53,12 +53,16 @@ class InfoLandscape extends InfoBase {
   }
 
   List<Widget> _getRow2(BuildContext context) {
-    return const [
-      SizedBox(height: UkodusDimentions.paddingBig),
-      SizedBox(height: UkodusDimentions.paddingBig),
-      SizedBox(height: UkodusDimentions.paddingBig),
-      SizedBox(height: UkodusDimentions.paddingBig),
-      SizedBox(height: UkodusDimentions.paddingBig),
+    final height = UkodusDimentions.getHeight(context) < 600
+        ? UkodusDimentions.padding
+        : UkodusDimentions.paddingBig;
+
+    return [
+      SizedBox(height: height),
+      SizedBox(height: height),
+      SizedBox(height: height),
+      SizedBox(height: height),
+      SizedBox(height: height),
     ];
   }
 

@@ -7,11 +7,14 @@ class InfoPortrait extends InfoBase {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SizedBox(
-        width: UkodusDimentions.getWidth(context) * 0.9,
-        child: Column(
-          children: _getContent(context),
+    return SingleChildScrollView(
+      child: Center(
+        child: SizedBox(
+          width: UkodusDimentions.getWidth(context) * 0.95,
+          height: 800.0,
+          child: Column(
+            children: _getContent(context),
+          ),
         ),
       ),
     );

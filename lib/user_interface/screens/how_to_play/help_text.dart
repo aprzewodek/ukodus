@@ -18,9 +18,23 @@ class HelpText extends StatelessWidget {
       text,
       style: TextStyle(
         color: UkodusColors.font,
-        fontSize: UkodusDimentions.fontSize,
+        fontSize: _getFontSize(context),
         fontWeight: isHeader ? FontWeight.bold : FontWeight.normal,
       ),
     );
+  }
+
+  double _getFontSize(BuildContext context) {
+    final height = UkodusDimentions.getHeight(context);
+
+    var size = UkodusDimentions.fontSize;
+    if (height < 800) {
+      size = UkodusDimentions.fontSizeSmall;
+    }
+    if (height < 700) {
+      size = UkodusDimentions.fontSizeSmallDevice;
+    }
+
+    return size;
   }
 }

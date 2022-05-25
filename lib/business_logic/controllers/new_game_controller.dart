@@ -29,7 +29,7 @@ class NewGameController {
 
   Future<String?> loadGame(UkodusType type, String name) async {
     try {
-      final path = 'json/${type.name.substring(0, 1)}$name.json';
+      final path = 'assets/json/${type.name.substring(0, 1)}$name.json';
       final jsonString = await rootBundle.loadString(path);
       final data = await json.decode(jsonString);
       final levels = data['level'] as String;

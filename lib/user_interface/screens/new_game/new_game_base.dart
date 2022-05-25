@@ -60,7 +60,6 @@ class NewGameBase extends StatelessWidget {
     String name,
     int bestPoints,
   ) {
-    print('play-$type-$fullName');
     return UkodusSimpleButton(
       key: Key('play-$type-$fullName'),
       label: 'Play',

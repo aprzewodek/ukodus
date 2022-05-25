@@ -39,8 +39,15 @@ class InfoBase extends StatelessWidget {
   }
 
   Widget _getHeadder(BuildContext context, String text) {
+    final height = UkodusDimentions.getHeight(context);
+
+    var padding = UkodusDimentions.padding;
+    if (height < 700) {
+      padding = 0.0;
+    }
+
     return Padding(
-      padding: const EdgeInsets.all(UkodusDimentions.padding),
+      padding: EdgeInsets.all(padding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -51,9 +58,10 @@ class InfoBase extends StatelessWidget {
           ),
           Text(
             text.toUpperCase(),
-            style: Theme.of(context).textTheme.headline4!.copyWith(
-                  color: UkodusColors.fontDescription,
-                ),
+            style: TextStyle(
+              color: UkodusColors.fontDescription,
+              fontSize: _getFontSize(context),
+            ),
           ),
           const Icon(
             Icons.arrow_left,
@@ -70,11 +78,25 @@ class InfoBase extends StatelessWidget {
       padding: const EdgeInsets.all(UkodusDimentions.padding),
       child: Text(
         text.toUpperCase(),
-        style: Theme.of(context).textTheme.headline6!.copyWith(
+        style: Theme.of(context).textTheme.bodyText1!.copyWith(
               color: UkodusColors.font,
             ),
       ),
     );
+  }
+
+  double _getFontSize(BuildContext context) {
+    final height = UkodusDimentions.getHeight(context);
+
+    var size = UkodusDimentions.fontSize;
+    if (height < 800) {
+      size = UkodusDimentions.fontSizeSmall;
+    }
+    if (height < 700) {
+      size = UkodusDimentions.fontSizeSmallDevice;
+    }
+
+    return size;
   }
 
   Widget getEmailButton(BuildContext context) {

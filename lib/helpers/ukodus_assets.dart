@@ -8,17 +8,17 @@ class UkodusAssets {
   static const best = 'assets/images/best.png';
   static const lost = 'assets/images/lost.png';
 
-  static const help01 = 'images/help/help01.jpg';
-  static const help02 = 'images/help/help02.jpg';
-  static const help03 = 'images/help/help03.jpg';
-  static const help04 = 'images/help/help04.jpg';
-  static const help05 = 'images/help/help05.jpg';
-  static const help06 = 'images/help/help06.jpg';
-  static const help07 = 'images/help/help07.jpg';
-  static const help08 = 'images/help/help08.jpg';
-  static const help09 = 'images/help/help09.jpg';
-  static const help10 = 'images/help/help10.jpg';
-  static const help11 = 'images/help/help11.jpg';
+  static const help01 = 'assets/images/help/help01.jpg';
+  static const help02 = 'assets/images/help/help02.jpg';
+  static const help03 = 'assets/images/help/help03.jpg';
+  static const help04 = 'assets/images/help/help04.jpg';
+  static const help05 = 'assets/images/help/help05.jpg';
+  static const help06 = 'assets/images/help/help06.jpg';
+  static const help07 = 'assets/images/help/help07.jpg';
+  static const help08 = 'assets/images/help/help08.jpg';
+  static const help09 = 'assets/images/help/help09.jpg';
+  static const help10 = 'assets/images/help/help10.jpg';
+  static const help11 = 'assets/images/help/help11.jpg';
 
-  static const levels = 'json/levels.json';
+  static const levels = 'assets/json/levels.json';
 }

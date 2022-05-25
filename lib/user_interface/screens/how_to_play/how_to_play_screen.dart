@@ -73,13 +73,16 @@ class _HowToPlayScreenState extends State<HowToPlayScreen> {
       bottom: UkodusDimentions.padding,
       left: UkodusDimentions.paddingBig,
       right: UkodusDimentions.paddingBig * 2,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          _getTextButton('Skip', _skip, false),
-          _getPageIndicator(),
-          _getTextButton('Next', _next, true),
-        ],
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _getTextButton('Skip', _skip, false),
+            _getPageIndicator(),
+            _getTextButton('Next', _next, true),
+          ],
+        ),
       ),
     );
   }

@@ -73,6 +73,6 @@ GameModel _getGameModel(UkodusType type) {
     level:
         '542621315636415241123322546423551664461643325651261134215244263334156232156232451',
     type: type,
-    bestPoints: 100,
+    bestPoints: 0,
   );
 }

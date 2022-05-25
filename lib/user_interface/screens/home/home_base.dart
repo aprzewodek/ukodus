@@ -18,7 +18,7 @@ class HomeBase extends StatelessWidget {
   }
 
   Widget getLogo(BuildContext context) {
-    final scale = UkodusDimentions.getHeight(context) < 710 ? 1.5 : 1.0;
+    final scale = UkodusDimentions.getHeight(context) < 710 ? 2.2 : 1.0;
 
     return Center(
       child: Container(
@@ -28,7 +28,7 @@ class HomeBase extends StatelessWidget {
           borderRadius: BorderRadius.circular(UkodusDimentions.borderRatius),
         ),
         child: Image.asset(
-          UkodusAssets.classic,
+          UkodusAssets.help01,
           scale: scale,
         ),
       ),
