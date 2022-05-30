@@ -19,9 +19,6 @@ Future<void> _leaveTest(WidgetTester tester) async {
   await _startGame(tester);
   await _tapNumber(tester);
   await _goBack(tester);
-
-  // Verify the counter increments by 1.
-  expect(find.text('1'), findsOneWidget);
 }
 
 Future<void> _newGame(WidgetTester tester) async {
@@ -52,7 +49,7 @@ Future<void> _tapNumber(WidgetTester tester) async {
 
 Future<void> _goBack(WidgetTester tester) async {
   final backButton = find.byType(BackButton);
-    await tester.tap(backButton);
+  await tester.tap(backButton);
 
-    await tester.pumpAndSettle();
+  await tester.pumpAndSettle();
 }
